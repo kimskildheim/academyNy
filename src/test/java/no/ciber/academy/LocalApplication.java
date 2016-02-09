@@ -25,7 +25,7 @@ public class LocalApplication {
     @Bean
     public DataSource dataSource() throws URISyntaxException {
         JdbcDataSource basicDataSource = new JdbcDataSource();
-        basicDataSource.setUrl("jdbc:h2:test");
+        basicDataSource.setUrl("jdbc:h2:test;DB_CLOSE_DELAY=-1");
 
         return basicDataSource;
     }
