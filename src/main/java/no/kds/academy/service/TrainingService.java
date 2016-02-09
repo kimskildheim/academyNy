@@ -1,6 +1,6 @@
-package no.ciber.academy.service;
+package no.kds.academy.service;
 
-import no.ciber.academy.domain.TrainingSession;
+import no.kds.academy.domain.TrainingSession;
 
 public interface TrainingService {
 

@@ -1,8 +1,8 @@
-package no.ciber.academy.service;
+package no.kds.academy.service;
 
 
-import no.ciber.academy.domain.TrainingSession;
-import no.ciber.academy.repository.TrainingSessionRepository;
+import no.kds.academy.domain.TrainingSession;
+import no.kds.academy.repository.TrainingSessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class TraningServiceImpl implements TrainingService{

@@ -1,4 +1,4 @@
-package no.ciber.academy;
+package no.kds.academy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

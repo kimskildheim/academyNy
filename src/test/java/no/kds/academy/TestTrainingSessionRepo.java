@@ -1,7 +1,7 @@
-package no.ciber.academy;
+package no.kds.academy;
 
-import no.ciber.academy.domain.TrainingSession;
-import no.ciber.academy.repository.TrainingSessionRepository;
+import no.kds.academy.domain.TrainingSession;
+import no.kds.academy.repository.TrainingSessionRepository;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,7 +1,7 @@
-package no.ciber.academy.web.controller;
+package no.kds.academy.web.controller;
 
-import no.ciber.academy.domain.TrainingSession;
-import no.ciber.academy.repository.TrainingSessionRepository;
+import no.kds.academy.domain.TrainingSession;
+import no.kds.academy.repository.TrainingSessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

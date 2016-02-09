@@ -1,6 +1,6 @@
-package no.ciber.academy.repository;
+package no.kds.academy.repository;
 
-import no.ciber.academy.domain.TrainingSession;
+import no.kds.academy.domain.TrainingSession;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package no.ciber.academy.domain;
+package no.kds.academy.domain;
 
 import javax.persistence.*;
 import java.io.Serializable;

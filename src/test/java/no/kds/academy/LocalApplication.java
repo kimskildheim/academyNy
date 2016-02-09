@@ -1,4 +1,4 @@
-package no.ciber.academy;
+package no.kds.academy;
 
 import org.h2.jdbcx.JdbcDataSource;
 import org.h2.tools.Server;

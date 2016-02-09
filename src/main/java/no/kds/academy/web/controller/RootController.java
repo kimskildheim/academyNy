@@ -1,4 +1,4 @@
-package no.ciber.academy.web.controller;
+package no.kds.academy.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
