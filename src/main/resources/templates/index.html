@@ -6,11 +6,15 @@
 </head>
 <body>
 
-<div layout:fragment="content"
-     class="container">
-    <!--<div>-->
-        <!--<span class="glyphicon glyphicon-plus"></span> <a href="form.html" th:href="@{/books/(init)}">Legg til treningsøkt</a>-->
-    <!--</div>-->
-</div>
+    <div layout:fragment="content" class="container">
+        <div th:if="${listOfTrainingSessions != null}" class="row">
+            <div class="list-group" th:each="trainingSession : ${listOfTrainingSessions}">
+                <a href="#" class="list-group-item active" th:text="${trainingSession.title}" ></a>
+                <!--<h4 class="list-group-item-heading" th:text="${trainingSession.title}"></h4>-->
+                <p class="list-group-item-text" th:text="${trainingSession.description}"></p>
+                <!--<a href="#" class="list-group-item active" th:text="${trainingSession.description}"></a>-->
+            </div>
+        </div>
+    </div>
 </body>
 </html>

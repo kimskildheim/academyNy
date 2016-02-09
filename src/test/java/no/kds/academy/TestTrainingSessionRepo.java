@@ -16,8 +16,4 @@ public class TestTrainingSessionRepo {
         repository.saveAndFlush(new TrainingSession());
     }
 
-
-
-//    repository. saveAndFlush(new RawData("test"));
-//    System.out.println(repository.count());
 }

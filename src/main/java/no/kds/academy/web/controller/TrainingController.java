@@ -29,10 +29,10 @@ public class TrainingController {
                 return "training/addTraining";
             }
 
-            trainingSessionRepository.save(newTrainingSession); //Funker denne?
+            trainingSessionRepository.save(newTrainingSession);
 
             redirect.addFlashAttribute("globalMessage", String.format(
-                    "Successfully created a new training session " + trainingSessionRepository.findOne(1L).getTitle() + " with the title '%s'.", newTrainingSession.getTitle()));
+                    "Successfully created a new training session  with the title '%s'.", newTrainingSession.getTitle()));
             return "redirect:/";
         }
 }
