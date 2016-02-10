@@ -1,5 +1,6 @@
 package no.kds.academy.web.controller;
 
+import no.kds.academy.Util.TrainingSessionListManupulation;
 import no.kds.academy.domain.TrainingSession;
 import no.kds.academy.repository.TrainingSessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,10 @@ public class RootController {
     public String index(Model model) {
 
         List<TrainingSession> listOfTrainingSessions = trainingSessionRepository.findAll();
-
         model.addAttribute("listOfTrainingSessions", listOfTrainingSessions);
+
+        List<TrainingSession> lastThreeTraininsSessions = TrainingSessionListManupulation.listOutLastThreeTrainingsSessins(listOfTrainingSessions);
+        model.addAttribute("lastThreeTrainingSessions",lastThreeTraininsSessions);
 
         return "index";
     }
