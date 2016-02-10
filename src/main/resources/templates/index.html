@@ -10,10 +10,27 @@
         <div th:if="${listOfTrainingSessions != null}" class="row">
             <div class="list-group" th:each="trainingSession : ${listOfTrainingSessions}">
                 <a href="#" class="list-group-item active" th:text="${trainingSession.title}" ></a>
-                <!--<h4 class="list-group-item-heading" th:text="${trainingSession.title}"></h4>-->
                 <p class="list-group-item-text" th:text="${trainingSession.description}"></p>
-                <!--<a href="#" class="list-group-item active" th:text="${trainingSession.description}"></a>-->
             </div>
+        </div>
+        <h2></h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="trainingSession : ${listOfTrainingSessions}">
+                        <td th:text="${trainingSession.id}"></td>
+                        <td th:text="${trainingSession.title}"></td>
+                        <td th:text="${trainingSession.description}"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
