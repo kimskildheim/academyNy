@@ -1,7 +1,7 @@
 package no.kds.academy.web.controller;
 
 import no.kds.academy.domain.TrainingSession;
-import no.kds.academy.repository.TrainingSessionRepository;
+import no.kds.academy.service.TrainingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ import javax.validation.Valid;
 public class TrainingController {
 
         @Autowired
-        TrainingSessionRepository trainingSessionRepository;
+        TrainingService trainingService;
 
         @RequestMapping("/addTrainingSession")
         public String addTrainingSession(Model trainingSession) {
@@ -29,7 +29,7 @@ public class TrainingController {
                 return "training/addTraining";
             }
 
-            trainingSessionRepository.save(newTrainingSession);
+            trainingService.saveTrainingSession(newTrainingSession);
 
             redirect.addFlashAttribute("globalMessage", String.format(
                     "Successfully created a new training session  with the title '%s'.", newTrainingSession.getTitle()));

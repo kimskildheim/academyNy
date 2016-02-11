@@ -2,7 +2,7 @@ package no.kds.academy.web.controller;
 
 import no.kds.academy.Util.TrainingSessionListManupulation;
 import no.kds.academy.domain.TrainingSession;
-import no.kds.academy.repository.TrainingSessionRepository;
+import no.kds.academy.service.TrainingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,16 +14,16 @@ import java.util.List;
 public class RootController {
 
     @Autowired
-    private TrainingSessionRepository trainingSessionRepository;
+    private TrainingService trainingService;
 
     @RequestMapping("/")
     public String index(Model model) {
 
-        List<TrainingSession> listOfTrainingSessions = trainingSessionRepository.findAll();
+        List<TrainingSession> listOfTrainingSessions = trainingService.findAllTrainingSessions();
         model.addAttribute("listOfTrainingSessions", listOfTrainingSessions);
 
-        List<TrainingSession> lastThreeTraininsSessions = TrainingSessionListManupulation.listOutLastThreeTrainingsSessins(listOfTrainingSessions);
-        model.addAttribute("lastThreeTrainingSessions",lastThreeTraininsSessions);
+        List<TrainingSession> lastThreeTrainingSessions = TrainingSessionListManupulation.listOutLastThreeTrainingsSessins(listOfTrainingSessions);
+        model.addAttribute("lastThreeTrainingSessions",lastThreeTrainingSessions);
 
         return "index";
     }
