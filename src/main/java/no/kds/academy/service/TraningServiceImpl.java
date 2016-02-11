@@ -13,6 +13,7 @@ public class TraningServiceImpl implements TrainingService{
     @Autowired
     private TrainingSessionRepository trainingSessionRepository;
 
+
     public List<TrainingSession> findAllTrainingSessions() {
         return trainingSessionRepository.findAll();
     }

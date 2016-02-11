@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 @Controller
@@ -18,6 +20,10 @@ public class RootController {
 
     @RequestMapping("/")
     public String index(Model model) {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
+        Calendar calendar = Calendar.getInstance();
+        model.addAttribute("today", dateFormat.format(calendar.getTime()));
 
         List<TrainingSession> listOfTrainingSessions = trainingService.findAllTrainingSessions();
         model.addAttribute("listOfTrainingSessions", listOfTrainingSessions);
